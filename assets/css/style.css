@@ -1,0 +1,55 @@
+:root {
+    --bg-dark: #2c3e50;
+    --bg-light: #f4f7f6;
+    --accent: #55afba;
+    --text-muted: #bdc3c7;
+    --danger: #e74c3c;
+    --success: #2ecc71;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+body { display: flex; background: var(--bg-light); min-height: 100vh; overflow-x: hidden; }
+
+/* SIDEBAR - Fixed di kiri */
+.sidebar {
+    width: 260px; background: var(--bg-dark); color: var(--white);
+    position: fixed; height: 100vh; left: 0; top: 0;
+    padding: 25px 0; display: flex; flex-direction: column; z-index: 1000;
+}
+
+.sidebar-header { padding: 0 25px 30px; font-size: 22px; font-weight: bold; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.sidebar-menu { flex: 1; padding-top: 20px; }
+.sidebar a { display: flex; align-items: center; gap: 15px; padding: 14px 25px; color: var(--text-muted); text-decoration: none; transition: 0.3s; }
+.sidebar a:hover, .sidebar a.active { background: #34495e; color: var(--white); border-left: 4px solid var(--accent); }
+
+/* MAIN CONTENT - Solusi agar tidak ketimpa sidebar */
+.main-content { 
+    margin-left: 260px; /* SAMA DENGAN LEBAR SIDEBAR */
+    width: calc(100% - 260px); 
+    padding: 40px; 
+    min-height: 100vh;
+}
+
+.card { background: var(--white); padding: 25px; border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 20px; overflow-x: auto; }
+h1 { font-size: 24px; color: var(--bg-dark); margin-bottom: 30px; display: flex; align-items: center; gap: 12px; }
+
+/* TABLE */
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th { text-align: left; padding: 15px; background: #f8f9fa; color: #7f8c8d; font-size: 13px; text-transform: uppercase; border-bottom: 2px solid #eee; }
+td { padding: 15px; border-bottom: 1px solid #eee; font-size: 14px; color: #333; }
+
+/* BUTTONS */
+.btn { padding: 8px 16px; border-radius: 6px; border: none; cursor: pointer; text-decoration: none; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; }
+.btn-add { background: var(--accent); color: white; }
+.btn-approve { background: var(--success); color: white; }
+.btn-reject { background: var(--danger); color: white; }
+
+/*notif*/
+.sidebar a span {
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
