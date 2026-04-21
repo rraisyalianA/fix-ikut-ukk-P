@@ -53,3 +53,20 @@ td { padding: 15px; border-bottom: 1px solid #eee; font-size: 14px; color: #333;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
+/*logout*/
+.auth-container {
+    display: flex;
+    justify-content: center; /* Tengah horizontal */
+    align-items: center;     /* Tengah vertikal */
+    height: 100vh;           /* Tinggi sepenuh layar */
+    background: #f4f7f6;     /* Warna background dashboard */
+}
+
+.auth-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 380px;
+    text-align: center;      /* Biar tulisan di dalamnya rata tengah */
+}
